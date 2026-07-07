@@ -2,4 +2,28 @@
 GET http://127.0.0.1:8000/mail/test?email=2570140889@qq.com
 
 ###
+# 测试发送验证码
 GET http://127.0.0.1:8000/auth/code?email=2570140889@qq.com
+
+###
+# 测试注册接口
+POST http://127.0.0.1:8000/auth/register
+Content-Type: application/json
+
+{
+    "email": "2570140889@qq.com",
+    "username": "celia",
+    "password": "123456",
+    "confirm_password": "123456",
+    "code": "3486"
+}
+
+###
+# 测试登录接口
+POST http://127.0.0.1:8000/auth/login
+Content-Type: application/json
+
+{
+    "email": "2570140889@qq.com",
+    "password": "123456"
+}
