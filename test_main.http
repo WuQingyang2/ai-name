@@ -27,3 +27,28 @@ Content-Type: application/json
     "email": "2570140889@qq.com",
     "password": "123456"
 }
+
+###
+# 测试生成名字接口1
+POST http://127.0.0.1:8000/name/
+Content-Type: application/json
+
+{
+    "surname": "张",
+    "length": "两字",
+    "gender": "女",
+    "other": "寓意吉祥"
+}
+
+###
+# 测试生成名字接口2
+POST http://127.0.0.1:8000/name/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIxIiwic3ViIjoiMSIsImV4cCI6MTc4NDcxOTAzNX0.O15jIb8yPXKFBOpKy6n1hnNtuV2dnOch3BOgD4swvcg
+
+{
+    "surname": "张",
+    "length": "两字",
+    "gender": "女",
+    "other": "寓意吉祥"
+}
