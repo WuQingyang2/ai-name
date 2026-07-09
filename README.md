@@ -57,7 +57,7 @@ http://127.0.0.1:8000/docs
       "password": "xxxxxx"
     }
     ```
-- `POST /name/`：根据用户要求生成名字，需要登录后携带访问令牌
+- `POST /question/`：生成面试题
   - 请求头：
     ```text
     Authorization: Bearer <token>
@@ -65,10 +65,11 @@ http://127.0.0.1:8000/docs
   - 请求体：
     ```json
     {
-      "surname": "张",
-      "gender": "女",
-      "length": "两字",
-      "other": "寓意吉祥",
-      "exclude": []
+      "job_title": "AI应用开发工程师",
+      "seniority": "初级",
+      "company_type": "互联网公司",
+      "tech_stack": ["Python", "LangChain", "MySQL"],
+      "question_count": 5,
+      "other": "希望问题涵盖基础知识和场景题"
     }
     ```

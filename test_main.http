@@ -28,27 +28,42 @@ Content-Type: application/json
     "password": "123456"
 }
 
+# ###
+# # 测试生成名字接口1
+# POST http://127.0.0.1:8000/name/
+# Content-Type: application/json
+
+# {
+#     "surname": "张",
+#     "length": "两字",
+#     "gender": "女",
+#     "other": "寓意吉祥"
+# }
+
+# ###
+# # 测试生成名字接口2
+# POST http://127.0.0.1:8000/name/
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIxIiwic3ViIjoiMSIsImV4cCI6MTc4NDcxOTAzNX0.O15jIb8yPXKFBOpKy6n1hnNtuV2dnOch3BOgD4swvcg
+
+# {
+#     "surname": "张",
+#     "length": "两字",
+#     "gender": "女",
+#     "other": "寓意吉祥"
+# }
+
 ###
-# 测试生成名字接口1
-POST http://127.0.0.1:8000/name/
+# 测试生成面试问题接口
+POST http://127.0.0.1:8000/question/
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIxIiwic3ViIjoiMSIsImV4cCI6MTc4NDg4MzYxN30.KkiALRD4jrIPGWMpBEwJHjQSpAjfZoqOPYq35kL84Qc
 
 {
-    "surname": "张",
-    "length": "两字",
-    "gender": "女",
-    "other": "寓意吉祥"
-}
-
-###
-# 测试生成名字接口2
-POST http://127.0.0.1:8000/name/
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIxIiwic3ViIjoiMSIsImV4cCI6MTc4NDcxOTAzNX0.O15jIb8yPXKFBOpKy6n1hnNtuV2dnOch3BOgD4swvcg
-
-{
-    "surname": "张",
-    "length": "两字",
-    "gender": "女",
-    "other": "寓意吉祥"
+    "job_title": "AI应用开发工程师",
+    "seniority": "初级",
+    "company_type": "互联网公司",
+    "tech_stack": ["Python", "LangChain", "MySQL"],
+    "question_count": 5,
+    "other": "希望问题涵盖基础知识和场景题"
 }
