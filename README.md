@@ -1,4 +1,4 @@
-# AI Name
+# AI Interview Generator
 
 一个基于 FastAPI + LangChain 的后端练习项目。
 
